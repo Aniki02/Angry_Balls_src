@@ -1,8 +1,10 @@
 package exodecorateur_angryballs.maladroit.modele.decorator;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Vector;
 
+import exodecorateur_angryballs.maladroit.modele.decorator.dessinateur.Dessinateur;
 import mesmaths.geometrie.base.Vecteur;
 
 /**
@@ -43,6 +45,11 @@ public abstract class DecoratorBille implements Bille{
 	public int getClef() {
 		return this.billeDecore.getClef();
 	}
+	
+	@Override
+	public Color getCouleur() {
+		return this.billeDecore.getCouleur();
+	}
 
 	@Override
 	public double masse() {
@@ -55,8 +62,8 @@ public abstract class DecoratorBille implements Bille{
 	}
 
 	@Override
-	public void dessine(Graphics g) {
-		this.billeDecore.dessine(g);
+	public void dessine(Dessinateur d) {
+		this.billeDecore.dessine(d);
 		
 	}
 

@@ -81,19 +81,19 @@ v4 = Vecteur.creationAleatoire(-vMax, -vMax, vMax, vMax);
 
 
 // Rectiligne + Rebond
-//billes.add(new Rebond(new BilleNue(p0, rayon, v0, Color.red)));
+billes.add(new Rebond(new BilleNue(p0, rayon, v0, Color.red)));
 
 //Pesanteur + Frottement + Rebond
 billes.add(new Pesanteur(new Frottement(new Rebond(new BilleNue(p1, rayon, v1, Color.yellow))), new Vecteur(0, 0.001)));
 
 //Newton + Frottement + Rebond
-//billes.add(new Newton(new Frottement(new Rebond(new BilleNue(p2, rayon, v2, Color.green)))));
+billes.add(new Newton(new Frottement(new Rebond(new BilleNue(p2, rayon, v2, Color.green)))));
 
 //Rectiligne + PasseMuraille
-//billes.add(new PasseMuraille(new BilleNue(p3, rayon, v3, Color.cyan)));
+billes.add(new PasseMuraille(new BilleNue(p3, rayon, v3, Color.cyan)));
 
 //Newton + Bloque
-//billes.add(new Newton(new Bloque(new BilleNue(p4, rayon, v4, Color.black))));
+billes.add(new Newton(new Bloque(new BilleNue(p4, rayon, v4, Color.pink))));
 
 @SuppressWarnings("unused")
 ManagerEtat managerEtat = new ManagerEtat(billes, cadre.billard);

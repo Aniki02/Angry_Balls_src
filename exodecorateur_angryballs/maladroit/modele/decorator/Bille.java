@@ -1,8 +1,10 @@
 package exodecorateur_angryballs.maladroit.modele.decorator;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Vector;
 
+import exodecorateur_angryballs.maladroit.modele.decorator.dessinateur.Dessinateur;
 import mesmaths.geometrie.base.Vecteur;
 
 /**
@@ -36,6 +38,12 @@ public interface Bille {
 	 * @return the clef
 	 */
 	public int getClef();
+	
+	/**
+	 * 
+	 * @return the color
+	 */
+	public Color getCouleur();
 
 	public double masse();
 	
@@ -85,7 +93,7 @@ public interface Bille {
 
 
 
-	public void dessine (Graphics g);
+	public void dessine (Dessinateur d);
 
 
 	public String toString();

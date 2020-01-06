@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Vector;
 
+import exodecorateur_angryballs.maladroit.modele.decorator.dessinateur.Dessinateur;
 import mesmaths.cinematique.Cinematique;
 import mesmaths.geometrie.base.Geop;
 import mesmaths.geometrie.base.Vecteur;
@@ -79,6 +80,10 @@ public class BilleNue implements Bille{
 	public int getClef() {
 		return this.clef;
 	}
+	@Override
+	public Color getCouleur() {
+		return this.couleur;
+	}
 
 	@Override
 	public double masse() {
@@ -107,19 +112,8 @@ public class BilleNue implements Bille{
 			double hauteur) {}
 
 	@Override
-	public void dessine(Graphics g) {
-		int width, height;
-	    int xMin, yMin;
-	    
-	    xMin = (int)Math.round(position.x-rayon);
-	    yMin = (int)Math.round(position.y-rayon);
-
-	    width = height = 2*(int)Math.round(rayon); 
-
-	    g.setColor(couleur);
-	    g.fillOval( xMin, yMin, width, height);
-	    g.setColor(Color.CYAN);
-	    g.drawOval(xMin, yMin, width, height);
+	public void dessine(Dessinateur d) {
+		d.dessine(this);
 		
 	}
 	

@@ -5,6 +5,8 @@ import java.awt.Graphics;
 import java.util.Vector;
 
 import exodecorateur_angryballs.maladroit.modele.decorator.Bille;
+import exodecorateur_angryballs.maladroit.modele.decorator.dessinateur.Dessinateur;
+import exodecorateur_angryballs.maladroit.modele.decorator.dessinateur.DessinateurJava;
 
 
 /**
@@ -28,9 +30,9 @@ this.billes = billes;
     public void paint(Graphics graphics)
     {
     int i;
-    
+    Dessinateur d = new DessinateurJava(graphics);
     for ( i = 0; i < this.billes.size(); ++i)
-        this.billes.get(i).dessine(graphics);
+        this.billes.get(i).dessine(d);
     
     //System.out.println("billes dans le billard = " + billes);
     }
