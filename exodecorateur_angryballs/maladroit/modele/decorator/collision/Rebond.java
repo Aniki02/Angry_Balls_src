@@ -19,10 +19,10 @@ public class Rebond extends Collision{
 	@Override
 	public void collisionContour(double abscisseCoinHautGauche, double ordonneeCoinHautGauche, double largeur,
 			double hauteur) {
-		//this.billeDecore.collisionContour(abscisseCoinHautGauche, ordonneeCoinHautGauche, largeur, hauteur);
 		Collisions.collisionBilleContourAvecRebond(this.getPosition(), this.getRayon(), 
-				this.getVitesse(),
-				abscisseCoinHautGauche, ordonneeCoinHautGauche, largeur, hauteur);
+												   this.getVitesse(),
+												   abscisseCoinHautGauche,
+												   ordonneeCoinHautGauche, largeur, hauteur);
 		
 			
 	}

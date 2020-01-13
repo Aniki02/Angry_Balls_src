@@ -1,6 +1,8 @@
 package exodecorateur_angryballs.maladroit.modele.decorator.Acceleration;
 
 
+import java.util.Vector;
+
 import exodecorateur_angryballs.maladroit.modele.decorator.Bille;
 import exodecorateur_angryballs.maladroit.modele.decorator.DecoratorBille;
 
@@ -21,5 +23,14 @@ public abstract class Acceleration extends DecoratorBille{
 	public void collisionContour(double abscisseCoinHautGauche, double ordonneeCoinHautGauche, double largeur,double hauteur) {
 		this.billeDecore.collisionContour(abscisseCoinHautGauche, ordonneeCoinHautGauche, largeur, hauteur);
 	}
+	
+	@Override
+	public void gestionAcceleration(Vector<Bille> billes) {
+		this.billeDecore.gestionAcceleration(billes);
+		this.addAcceleration(billes);
+	}
+	
+	
+	protected abstract void addAcceleration(Vector<Bille> billes);
 
 }

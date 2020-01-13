@@ -1,7 +1,6 @@
 package exodecorateur_angryballs.maladroit.modele.decorator;
 
 import java.awt.Color;
-import java.awt.Graphics;
 import java.util.Vector;
 
 import exodecorateur_angryballs.maladroit.modele.decorator.dessinateur.Dessinateur;

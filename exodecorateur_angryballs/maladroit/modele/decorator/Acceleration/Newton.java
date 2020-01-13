@@ -14,13 +14,10 @@ public class Newton extends Acceleration{
 
 	public Newton(Bille billeDecore) {
 		super(billeDecore);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public void gestionAcceleration(Vector<Bille> billes) {
-		// TODO Auto-generated method stub
-		this.billeDecore.gestionAcceleration(billes);
+	protected void addAcceleration(Vector<Bille> billes) {
 		this.getAcceleration().ajoute(OutilsBilleDecorator.gestionAccelerationNewton(this.billeDecore, billes));
 		
 	}

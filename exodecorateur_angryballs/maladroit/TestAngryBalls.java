@@ -93,7 +93,7 @@ billes.add(new Newton(new Frottement(new Rebond(new BilleNue(p2, rayon, v2, Colo
 billes.add(new PasseMuraille(new BilleNue(p3, rayon, v3, Color.cyan)));
 
 //Newton + Bloque
-billes.add(new Newton(new Bloque(new BilleNue(p4, rayon, v4, Color.pink))));
+billes.add(new Newton(new Bloque(new BilleNue(p4, rayon, v4, Color.black))));
 
 @SuppressWarnings("unused")
 ManagerEtat managerEtat = new ManagerEtat(billes, cadre.billard);

@@ -14,15 +14,13 @@ public class Frottement extends Acceleration{
 
 	public Frottement(Bille billeDecore) {
 		super(billeDecore);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public void gestionAcceleration(Vector<Bille> billes) {
-		// TODO Auto-generated method stub
-		this.billeDecore.gestionAcceleration(billes);
+	protected void addAcceleration(Vector<Bille> billes) {
 		this.getAcceleration().ajoute(MecaniquePoint.freinageFrottement(this.billeDecore.masse(), this.getVitesse()));
 		
 	}
+	
 
 }

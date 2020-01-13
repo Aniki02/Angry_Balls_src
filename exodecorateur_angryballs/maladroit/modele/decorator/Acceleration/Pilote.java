@@ -3,7 +3,6 @@ package exodecorateur_angryballs.maladroit.modele.decorator.Acceleration;
 import java.util.Vector;
 
 import exodecorateur_angryballs.maladroit.modele.decorator.Bille;
-import exodecorateur_angryballs.maladroit.modele.decorator.DecoratorBille;
 import mesmaths.geometrie.base.Vecteur;
 
 /**
@@ -18,13 +17,10 @@ public class Pilote extends Acceleration{
 	public Pilote(Bille billeDecore) {
 		super(billeDecore);
 		this.forceLancer = Vecteur.VECTEURNUL;
-		// TODO Auto-generated constructor stub
 	}
-
+	
 	@Override
-	public void gestionAcceleration(Vector<Bille> billes) {
-		// TODO Auto-generated method stub
-		this.billeDecore.gestionAcceleration(billes);
+	protected void addAcceleration(Vector<Bille> billes) {
 		this.getAcceleration().ajoute(this.forceLancer);
 		
 	}
@@ -36,6 +32,8 @@ public class Pilote extends Acceleration{
 	public void setForceLancer(Vecteur forceLancer) {
 		this.forceLancer = forceLancer;
 	}
+
+	
 
 	
 	

@@ -20,10 +20,9 @@ public class Pesanteur extends Acceleration{
 	}
 
 	@Override
-	public void gestionAcceleration(Vector<Bille> billes) {
-		// TODO Auto-generated method stub
-		this.billeDecore.gestionAcceleration(billes);
+	protected void addAcceleration(Vector<Bille> billes) {
 		this.getAcceleration().ajoute(this.pesanteur);
+		
 	}
 
 }

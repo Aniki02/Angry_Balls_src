@@ -17,7 +17,6 @@ public class ControlleurEtatLibre extends ControlleurEtat{
 
 	public ControlleurEtatLibre(ControlleurEtat suivant, ManagerEtat me) {
 		super(suivant, me);
-		// TODO Auto-generated constructor stub
 	}
 
 	/**

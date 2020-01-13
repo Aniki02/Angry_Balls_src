@@ -2,7 +2,6 @@ package exodecorateur_angryballs.maladroit.modele.state;
 
 import java.awt.event.MouseEvent;
 
-import exodecorateur_angryballs.maladroit.modele.decorator.DecoratorBille;
 import exodecorateur_angryballs.maladroit.modele.decorator.Acceleration.Pilote;
 
 

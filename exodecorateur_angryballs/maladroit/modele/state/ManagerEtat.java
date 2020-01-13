@@ -27,7 +27,6 @@ public class ManagerEtat implements MouseMotionListener ,MouseListener{
 		this.billard.addMouseMotionListener(this);
 		
 		this.installeControlleur();
-		// TODO Auto-generated constructor stub
 	}
 	
 	/**

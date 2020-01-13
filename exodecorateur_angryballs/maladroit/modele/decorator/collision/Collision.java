@@ -4,7 +4,6 @@ import java.util.Vector;
 
 import exodecorateur_angryballs.maladroit.modele.decorator.Bille;
 import exodecorateur_angryballs.maladroit.modele.decorator.DecoratorBille;
-import mesmaths.geometrie.base.Vecteur;
 
 /**
 * Collision : toutes les fonctionnalité d'une bille qui impacteront ses collisions heriteront de Collision.
@@ -15,7 +14,6 @@ public abstract class Collision extends DecoratorBille{
 
 	public Collision(Bille billeDecore) {
 		super(billeDecore);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
